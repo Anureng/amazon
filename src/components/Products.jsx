@@ -17,7 +17,7 @@ function Products() {
 // {address &&  ok==data[0].buyed}
   console.log(data);
   const arrayDataItems = data?.map(el =>
-    <div className='flex space-x-4  p-2 flex-wrap'>
+    <div key={el} className='flex space-x-4  p-2 flex-wrap'>
       <div className='lg:p-8 lg:text-xl p-2  shadow-xl  w-96 rounded-xl bg-purple-600  text-white' key={el.id}>
       <p> id :- {el.id.toString()}</p>
       <img className='rounded-xl' src={"https://ipfs.io/ipfs/"+el.image} alt='loading' width={100} height={100} />

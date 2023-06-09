@@ -23,7 +23,7 @@ function OwnerPage() {
       </div>
       <div className='flex justify-center items-center space-x-4'>
         <div>
-          <Image className='rounded-xl' src="/Home.jpg" width={300} height={300}  />
+          <Image className='rounded-xl' src="/Home.jpg" alt='nothing' width={300} height={300}  />
         </div>
       <div className='p-4 rounded-xl bg-purple-600 space-x-2 space-y-2'>
         <p className='flex justify-center items-center text-lg text-white'>Only Owner Can make anyone owner by entering the address of user</p>

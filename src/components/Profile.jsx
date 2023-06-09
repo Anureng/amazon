@@ -1,7 +1,7 @@
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from '@/Details/Contract'
 import React, { useEffect, useState } from 'react'
 import { useContractRead,useAccount } from 'wagmi'
-import Image from "next/legacy/image";
+import Image from 'next/image'
 function Profile() {
   const { address, isConnecting, isDisconnected } = useAccount()
   const [id, setId] = useState()
@@ -71,7 +71,7 @@ const productDetailsKeys = ["name", "id", "rating", "stock", "image", "cost","ca
                     <div className=' bg-purple-600 mt-2  w-96 text-xl rounded-xl p-4'>
                      {data && <div>Id :- {String(data.id)}</div>}
                      {data && <div> Name :- {String(data.name)}</div>}
-                     {data && <img className='rounded-xl' src={"https://ipfs.io/ipfs/"+data.image} alt='loading' width={100} height={100} />}
+                     {data && <Image className='rounded-xl' src={"https://ipfs.io/ipfs/"+data.image} alt='loading' width={100} height={100} />}
                   {
                     data ? <div>
 
