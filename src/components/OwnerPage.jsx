@@ -12,7 +12,7 @@ function OwnerPage() {
   console.log(data)
   return (
     <div className='mt-16'>
-      <div className='flex flex-col h-[40rem]  justify-center items-center space-y-10'>
+      <div className='flex flex-col h-screen bg-purple-200  justify-center items-center space-y-10'>
       <div className='flex justify-center items-center text-xl text-purple-950'>
        <p className='text-2xl'>
          Owner Address :- 
@@ -27,8 +27,8 @@ function OwnerPage() {
         </div>
       <div className='p-4 rounded-xl bg-purple-600 space-x-2 space-y-2'>
         <p className='flex justify-center items-center text-lg text-white'>Only Owner Can make anyone owner by entering the address of user</p>
-        <input className="bg-transparent outline-none text-white px-1 py-2 rounded-xl border border-white" placeholder='Enter Address' type="text" onChange={(e)=>setContractAddress(e.target.value)}/>
-        <button className='bg-white px-1 py-2 rounded-xl'>Click</button>
+        <input className="bg-white outline-none text-white px-1 py-2 rounded-xl border border-white" placeholder='Enter Address' type="text" onChange={(e)=>setContractAddress(e.target.value)}/>
+        <button className='bg-purple-200 text-black px-1 py-2 rounded-xl'>Click</button>
       </div>
       </div>
       </div>

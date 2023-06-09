@@ -46,11 +46,14 @@ setId(data)
 const productDetailsKeys = ["name", "id", "rating", "stock", "image", "cost","category"]
 
   return (
-    <div className='mt-16'>
+    <div className=' bg-purple-200 mt-16 flex flex-col items-center justify-center h-screen space-y-10 text-xl'>
+      <div className='border border-black p-4 w-3/5 rounded-xl h-3/5 '>
+
    <div>
     <div>
-     <p>your orders are pending</p>
-      <p>Order Count:- {String(parseInt(OrderData)-1)}</p>
+     <p>your orders </p>
+    
+      <p>Order Count:- {String(parseInt(OrderData)===0?(OrderData):parseInt(OrderData)-1)}</p>
     </div>
    </div>
    <div className=''>
@@ -58,14 +61,14 @@ const productDetailsKeys = ["name", "id", "rating", "stock", "image", "cost","ca
    {/* {data.map((val, idx) => {
                         val = ((typeof val === "boolean") && val === true) ? "true" : ((typeof val === "boolean")   && val === false)? "false" : val 
                           console.log(val,idx);
-                       
-                        return (<ul key={val.id} className='text-[#112642]'>
+                          
+                          return (<ul key={val.id} className='text-[#112642]'>
                           <li>{productDetailsKeys[idx]}: {typeof val  === "object" }</li>
-                    </ul>)
-                    }) } */}
+                          </ul>)
+                        }) } */}
 
-                    <input type="text" className='' placeholder='Enter Id to View product' onChange={(e)=>setId(e.target.value)} />
-                    <div className='border border-black w-96 text-xl rounded-xl p-4'>
+                    <input type="text" className=' bg-white px-1 py-2 rounded-xl outline-none' placeholder='Enter Id to View product' onChange={(e)=>setId(e.target.value)} />
+                    <div className=' bg-purple-600 mt-2  w-96 text-xl rounded-xl p-4'>
                      {data && <div>Id :- {String(data.id)}</div>}
                      {data && <div> Name :- {String(data.name)}</div>}
                      {data && <img className='rounded-xl' src={"https://ipfs.io/ipfs/"+data.image} alt='loading' width={100} height={100} />}
@@ -78,15 +81,16 @@ const productDetailsKeys = ["name", "id", "rating", "stock", "image", "cost","ca
        <span> stock :-{String(data.stock)}</span><br />
                     </div>: <div>No product </div>}
              {/* {data.map((dataIdx,Idx)=>{
-return(
-  <div key={Idx}>
-<span>{dataIdx.id}</span>
-  </div>
-)
-             })} */}
+               return(
+                 <div key={Idx}>
+                 <span>{dataIdx.id}</span>
+                 </div>
+                 )
+                })} */}
              
                     </div>
    </div>
+                </div>
     </div>
   )
 }

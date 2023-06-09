@@ -17,7 +17,7 @@ function Products() {
 // {address &&  ok==data[0].buyed}
   console.log(data);
   const arrayDataItems = data?.map(el =>
-    <div className='flex space-x-4 border border-black p-2 flex-wrap'>
+    <div className='flex space-x-4  p-2 flex-wrap'>
       <div className='lg:p-8 lg:text-xl p-2  shadow-xl  w-96 rounded-xl bg-purple-600  text-white' key={el.id}>
       <p> id :- {el.id.toString()}</p>
       <img className='rounded-xl' src={"https://ipfs.io/ipfs/"+el.image} alt='loading' width={100} height={100} />
@@ -41,13 +41,13 @@ function Products() {
   const { write } = useContractWrite(config)
 
   return (
-    <div className='mt-16'>
+    <div className='mt-16 bg-purple-200 h-screen'>
      <div>
      </div>
      <div className='flex justify-center items-center flex-col space-y-4 p-2'>
       <p className='text-xl font-semibold mt-2'>Enter Product Id to Buy the product</p>
       <div className='space-x-2'>
-     <input className='outline-none border-black border px-1 py-2 rounded-xl' placeholder='Enter the Id' type="text" onChange={(e)=>setId(e.target.value)} />
+     <input className='outline-none  px-1 py-2 rounded-xl' placeholder='Enter the Id' type="text" onChange={(e)=>setId(e.target.value)} />
      <button  className='px-1 py-2 bg-purple-600 text-white rounded-xl' disabled={!write} onClick={() => write?.()}>Click</button>
       </div>
      </div>
