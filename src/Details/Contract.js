@@ -1,34 +1,22 @@
-export const CONTRACT_ADDRESS = "0xEF6A6bC7020C813EAab380F905363Ab0758A0DD0";
+export const CONTRACT_ADDRESS = "0xD410d0c5F6EEbbBb69Ef1228c67f0F70B7b42712";
 export const CONTRACT_ABI = [
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_id",
+        type: "uint256",
+      },
+    ],
+    name: "buy",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
   {
     inputs: [],
     stateMutability: "nonpayable",
     type: "constructor",
-  },
-  {
-    anonymous: false,
-    inputs: [
-      {
-        indexed: false,
-        internalType: "string",
-        name: "name",
-        type: "string",
-      },
-      {
-        indexed: false,
-        internalType: "uint256",
-        name: "cost",
-        type: "uint256",
-      },
-      {
-        indexed: false,
-        internalType: "uint256",
-        name: "quantity",
-        type: "uint256",
-      },
-    ],
-    name: "List",
-    type: "event",
   },
   {
     anonymous: false,
@@ -52,21 +40,8 @@ export const CONTRACT_ABI = [
         type: "uint256",
       },
     ],
-    name: "buy",
-    type: "event",
-  },
-  {
-    inputs: [
-      {
-        internalType: "uint256",
-        name: "_id",
-        type: "uint256",
-      },
-    ],
     name: "Buy",
-    outputs: [],
-    stateMutability: "payable",
-    type: "function",
+    type: "event",
   },
   {
     inputs: [
@@ -125,8 +100,46 @@ export const CONTRACT_ABI = [
     type: "function",
   },
   {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: false,
+        internalType: "string",
+        name: "name",
+        type: "string",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "cost",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "quantity",
+        type: "uint256",
+      },
+    ],
+    name: "List",
+    type: "event",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "newAddress",
+        type: "address",
+      },
+    ],
+    name: "transferOwnership",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
     inputs: [],
-    name: "wthdraw",
+    name: "withdraw",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
@@ -178,22 +191,9 @@ export const CONTRACT_ABI = [
             type: "bool",
           },
         ],
-        internalType: "struct Lock.Item[]",
+        internalType: "struct Dappazon.Item[]",
         name: "",
         type: "tuple[]",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "checkBalance",
-    outputs: [
-      {
-        internalType: "uint256",
-        name: "",
-        type: "uint256",
       },
     ],
     stateMutability: "view",
@@ -288,11 +288,6 @@ export const CONTRACT_ABI = [
     name: "orders",
     outputs: [
       {
-        internalType: "uint256",
-        name: "time",
-        type: "uint256",
-      },
-      {
         components: [
           {
             internalType: "uint256",
@@ -335,7 +330,7 @@ export const CONTRACT_ABI = [
             type: "bool",
           },
         ],
-        internalType: "struct Lock.Item",
+        internalType: "struct Dappazon.Item",
         name: "item",
         type: "tuple",
       },

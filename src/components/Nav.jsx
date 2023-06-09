@@ -7,7 +7,7 @@ const Nav = () => {
       {name:"Create Post",link:"post"},
       {name:"Profile",link:"profileDetails"},
       {name:"Need Testnet",link:"https://faucet.polygon.technology/"},
-      {name:"Swap",link:"#"},
+      {name:"Owner Paage",link:"owner"},
       {name:"Products",link:"allproducts"},
     ];
     let [open,setOpen]=useState(false);

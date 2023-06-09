@@ -50,8 +50,8 @@ function Header() {
                     </Link>
                 </div>
                 <div>
-                <Link href="#">
-                    <li className='flex items-center gap-x-2'><MdSwapHoriz/> Swap TestNet</li>
+                <Link href="owner">
+                    <li className='flex items-center gap-x-2'><FaEthereum/> Owner page</li>
                     </Link>
                 </div>
                 <div>
