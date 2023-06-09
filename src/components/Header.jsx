@@ -36,7 +36,7 @@ function Header() {
                 </ul> */}
                 <div>
                 <Link href="/post" className='space-y-10' >
-                    <li className='flex items-center gap-x-2 space-y-2'> <MdOutlinePostAdd/> Create Post</li>
+                    <li className='flex items-center gap-x-2 space-y-2'> <MdOutlinePostAdd/> Create Product</li>
                     </Link>
                 </div>
                 <div>
